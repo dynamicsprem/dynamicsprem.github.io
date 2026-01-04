@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <style>
         /* The Relaxed Vibe: Earth tones & Clean Typography */
         :root {
-            --bg-color: #f4f1ea; /* Warm paper color */
-            --text-color: #2c3e50; /* Soft dark blue/grey */
-            --accent-color: #6b8e23; /* Olive/Sage Green - Nature vibe */
+            --bg-color: #f4f1ea;
+            /* Warm paper color */
+            --text-color: #2c3e50;
+            /* Soft dark blue/grey */
+            --accent-color: #6b8e23;
+            /* Olive/Sage Green - Nature vibe */
             --font-serif: 'Merriweather', serif;
             --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -35,12 +39,29 @@
         .profile-frame {
             width: 150px;
             height: 150px;
-            background-color: #ddd; /* Placeholder grey */
+            background-color: #ddd;
+            /* Placeholder grey */
             border-radius: 50%;
             margin: 0 auto 30px;
             overflow: hidden;
             border: 4px solid var(--accent-color);
             /* Once you have a photo, add: background-image: url('photo.jpg'); background-size: cover; */
+        }
+
+        /* for the image inside the frame */
+        /* This targets the image INSIDE the profile frame */
+        .profile-frame img {
+            width: 100%;
+            /* Force image to take full width of the circle */
+            height: 100%;
+            /* Force image to take full height */
+            object-fit: cover;
+            /* Ensures the image doesn't get squashed/stretched */
+            border-radius: 50%;
+            /* Ensures the image itself is clipped to a circle */
+            display: block;
+            /* Removes tiny invisible margins at the bottom */
+           object-position: 75% 30%;
         }
 
         h1 {
@@ -88,23 +109,27 @@
             letter-spacing: 20px;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <div class="container">
         <div class="profile-frame">
-            </div>
+            <img src="images/profilepicture.jpg" alt="Prem Prakash">
+        </div>
 
         <h1>Prem Prakash</h1>
         <div class="tagline">Logic & Lens</div>
 
         <div class="bio">
             <p>
-                Currently building extensive solutions on the <strong>Power Platform</strong> (and missing the old Dynamics CRM ribbons, occasionally).
+                Currently building extensive solutions on the <strong>Power Platform</strong> (and missing the old
+                Dynamics CRM ribbons, occasionally).
             </p>
             <p>
-                When I'm not writing code, I'm usually behind a camera lens capturing the world. 
+                When I'm not writing code, I'm usually behind a camera lens capturing the world.
                 Full creative portfolio launching soon.
             </p>
         </div>
@@ -117,4 +142,5 @@
     </div>
 
 </body>
+
 </html>
